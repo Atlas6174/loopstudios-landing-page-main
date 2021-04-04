@@ -1,0 +1,21 @@
+/********************
+ ****** COLORS ******
+ ********************/
+
+/* Primary */
+$white: hsl(0, 0%, 100%);
+$black: hsl(0, 0%, 0%);
+$d_gray: hsl(0, 0%, 55%);
+$v_d_gray: hsl(0, 0%, 41%);
+
+/************************
+ ****** TYPOGRAPHY ******
+ ************************/
+
+/* Alata: 400 | "Josefin Sans": 300*/
+@mixin typ($family, $size, $weight, $color) {
+  font-family: $family, sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  color: $color;
+}
