@@ -1,0 +1,39 @@
+/*********************
+ ****** DESKTOP ******
+ *********************/
+.hero-section {
+  padding-top: 14rem;
+  padding-bottom: 9rem;
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+
+  .title-wrapper {
+    border: 2px solid $white;
+    width: 55%;
+    min-width: 36.75rem;
+    padding: 2.625rem 3rem 1.5rem;
+
+    text-transform: uppercase; 
+    line-height: 1;
+    @include typ('Josefin Sans', 2rem, 300, $white);
+  }
+}
+
+/********************
+ ****** MOBILE ******
+ ********************/
+@media(max-width: 600px) {
+  .hero-section {
+    padding-bottom: 14rem;
+    background-image: url(../images/mobile/image-hero.jpg);
+
+    .title-wrapper {
+      min-width: 20.25rem;
+      padding: 1.625rem 1.625rem 1rem;
+
+      font-size: 1.2rem;
+    }
+  }
+}

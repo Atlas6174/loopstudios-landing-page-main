@@ -25,3 +25,18 @@ li, ol, ul, a {
   list-style: none;
   text-decoration: none;
 }
+
+.container {
+  max-width: 69.625rem;
+  margin: 0 1.5rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+}
+
+/* AUXILIAR */
+.main {
+  background: blue;
+}
