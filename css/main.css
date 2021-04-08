@@ -64,18 +64,15 @@ li, ol, ul, a {
 }
 
 .container {
+  position: relative;
   max-width: 69.625rem;
+  width: 100%;
   margin: 0 1.5rem;
 }
 
 section {
   display: flex;
   justify-content: center;
-}
-
-/* AUXILIAR */
-.main {
-  background: blue;
 }
 
 .header-wrapper {
@@ -262,9 +259,64 @@ section {
     background-image: url(../images/mobile/image-hero.jpg);
   }
   .hero-section .title-wrapper {
+    width: 80%;
     min-width: 20.25rem;
     padding: 1.625rem 1.625rem 1rem;
     font-size: 1.2rem;
+  }
+}
+.first-section {
+  padding-top: 10.25rem;
+}
+.first-section .content {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 34.125rem;
+  padding-top: 6rem;
+  padding-left: 6rem;
+  background: white;
+}
+.first-section .content-title {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  color: black;
+}
+.first-section .content-text {
+  margin-top: 1.75rem;
+  line-height: 1.5;
+  font-family: "Alata", sans-serif;
+  font-size: 0.935rem;
+  font-weight: 400;
+  color: dimgray;
+}
+
+@media (max-width: 800px) {
+  .first-section {
+    padding-top: 6rem;
+  }
+  .first-section .img-wrapper {
+    width: 100%;
+  }
+  .first-section .img-wrapper .section-img {
+    width: 100%;
+  }
+  .first-section .content {
+    position: static;
+    width: 100%;
+    padding-top: 3rem;
+    padding-left: 0;
+  }
+  .first-section .content-title {
+    margin-top: 1.375rem;
+    text-align: center;
+    font-size: 2.25rem;
+  }
+  .first-section .content-text {
+    text-align: center;
+    font-size: 1.1rem;
   }
 }
 .attribution {

@@ -27,16 +27,13 @@ li, ol, ul, a {
 }
 
 .container {
+  position: relative;
   max-width: 69.625rem;
+  width: 100%;
   margin: 0 1.5rem;
 }
 
 section {
   display: flex;
   justify-content: center;
-}
-
-/* AUXILIAR */
-.main {
-  background: blue;
 }
