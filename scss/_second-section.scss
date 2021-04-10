@@ -1,0 +1,164 @@
+/****************************
+ ******* GRID SECTION *******
+ ****************************/
+
+/* 
+ * In this section the grid was used only for the images,
+ * both title and button are out of the grid.
+ */
+.second-section {
+  padding: 11.5rem 0;
+
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5rem;
+
+    .section-title {
+      text-transform: uppercase;
+      @include typ('Josefin Sans', 3rem, 300, $black);
+    }
+
+    .btn {
+      display: flex;
+      cursor: pointer;
+      border: 1px solid $black;
+      width: 9.75rem;
+      height: 2.625rem;
+      justify-content: center;
+      align-items: center;
+      background: $white;
+
+      @include transition;
+
+      &-content {
+	text-transform: uppercase;
+	@include typ('Alata', 1rem, 400, $black);
+      }
+
+      &:hover {
+	background: $black;
+	@include transition;
+	
+	.btn-content {
+	  color: $white;
+	  @include transition;
+	}
+      }
+    }
+  }
+
+  .btn-mobile {
+    display: none;
+  }
+}
+
+/* Structure for the images and its titles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  grid-gap: 2rem;
+  width: 100%;
+
+  &-item {
+    position: relative;
+
+    // THe title-wrapper is used to define the background in both initial
+    // and hover state rom every image
+    .title-wrapper {
+      position: absolute;
+      cursor: pointer;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(transparent, rgba(0, 0, 0, .6));
+      @include transition;
+      transition-duration: .3s;
+      
+      // Hover state from both title-wrapper and title
+      &:hover {
+	background: rgba(255, 255, 255, .5);
+	@include transition;
+	transition-duration: .3s;
+
+	.grid-item_title {
+	  color: $black;
+	  @include transition;
+	}
+      }
+    }
+  
+    // Title initial state
+    &_title {
+      position: absolute;
+      left: 15.625%;
+      bottom: 2.625rem;
+      @include transition;
+
+      text-transform: uppercase;
+      @include typ('Josefin Sans', 2rem, 400, $white);
+    }
+   
+    // Picture element
+    .img-container {
+      height: 100%;
+    }
+
+    // And this, is the image itself
+    &_img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+@media(max-width: 800px) {
+  // The pading and font-sizes between desktop and mobile are different
+  .second-section {
+    padding: 6.125rem 0;
+
+    .section-header {
+      margin-bottom: 3rem;
+      justify-content: center;
+
+      .section-title {
+	font-size: 2.25rem;
+      }
+
+      .btn {
+	display: none;
+      }
+    }
+   
+    .btn-mobile {
+      display: flex;
+      border: 1px solid $black;
+      width: 9.875rem;
+      height: 2.5rem;
+      justify-content: center;
+      align-items: center;
+      margin: 2.135rem auto 0;
+
+      .btn-content {
+	text-transform: uppercase;
+	@include typ('Alata', 1rem, 400, $black);
+      }
+    }
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    grid-gap: 1.5rem;
+
+    .title-wrapper {
+      background: linear-gradient(-90deg, transparent, rgba(0, 0, 0, .6));
+    }
+
+    &-item_title {
+      left: 7%;
+      bottom: 1.25rem;
+
+      font-size: 1.5rem;
+    }
+  }
+}

@@ -2,10 +2,20 @@
   position: fixed;
   display: flex;
   top: 4rem;
+  z-index: 999;
   height: auto;
   width: 100vw;
   padding: 0 1.5rem;
   justify-content: center;
+  align-items: center;
+  @include transition;
+
+  &.scrolled {
+    top: 0;
+    height: 3rem;
+    background: $black;
+    @include transition;
+  }
 }
 
 .header {
