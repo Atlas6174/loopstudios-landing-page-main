@@ -1,0 +1,91 @@
+.footer {
+  padding: 2.75rem 0;
+  background: $black;
+
+  @include typ('Alata', 1rem, 400, $white);
+
+  .flex {
+    display: flex;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+
+    &-item:nth-child(1) {
+      display: flex;
+      height: 4.5rem;
+      flex-flow: column wrap;
+      justify-content: space-between;
+
+      .logo-wrapper {
+	height: 1.5rem;
+
+	.logo {
+	  height: 100%;
+	}
+      }
+
+      .menu {
+	display: flex;
+	width: 23.75rem;
+	justify-content: space-between;
+	align-items: center;
+      }
+    }
+
+    &-item:nth-child(2) {
+      display: flex;
+      height: 4.5rem;
+      flex-flow: column wrap;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      .social-media {
+	display: flex;
+	width: 9.75rem;
+	justify-content: space-between;
+	align-items: center;
+      }
+      .warning {
+	color: $v_d_gray;
+      }
+    }
+  }
+}
+
+@media(max-width: 800px) {
+  .footer {
+    padding: 3.5rem 0;
+
+    .flex {
+      flex-flow: column wrap;
+      align-items: center;
+
+      &-item:nth-child(1) {
+	height: auto;
+	align-items: center;
+
+	.logo-wrapper {
+	  margin-bottom: 2.5rem;
+	}
+
+	.menu {
+	  flex-flow: column wrap;
+	  margin-bottom: 3rem;
+
+	  &-item {
+	    margin-bottom: 1.625rem;
+	  }
+	}
+      }
+
+      &-item:nth-child(2) {
+	height: auto;
+	align-items: center;
+
+	.social-media {
+	  margin-bottom: 1.5rem;
+	}
+      }
+    }
+  }
+}

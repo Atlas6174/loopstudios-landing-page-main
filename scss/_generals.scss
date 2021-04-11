@@ -33,7 +33,50 @@ li, ol, ul, a {
   margin: 0 1.5rem;
 }
 
-section {
+section, .footer {
   display: flex;
   justify-content: center;
+}
+
+.btn {
+  display: flex;
+  cursor: pointer;
+  border: 1px solid $black;
+  justify-content: center;
+  align-items: center;
+  background: $white;
+
+  @include transition;
+
+  &-content {
+    text-transform: uppercase;
+    @include typ('Alata', 1rem, 400, $black);
+  }
+
+  &:hover {
+    background: $black;
+    @include transition;
+
+    .btn-content {
+      color: $white;
+      @include transition;
+    }
+  }
+}
+
+// Auxiliar pseudo-class used to underline
+.subtitled {
+  position: relative;
+
+  &:hover::before {
+    display: block;
+    position: absolute;
+    top: 2rem;
+    left: 50%;
+    content: '';
+    height: 2px;
+    width: 1.5rem;
+    background: $white;
+    transform: translateX(-50%);
+  }
 }

@@ -13,7 +13,7 @@
   &.scrolled {
     top: 0;
     height: 3rem;
-    background: $black;
+    background: linear-gradient(90deg,#e048e8 ,#8847f9, #e048e8);
     @include transition;
   }
 }
@@ -48,28 +48,9 @@
       @include typ("Alata", .95rem, 400, $white);
 
       &-item {
-	position: relative;
 	display: flex;
 	cursor: pointer;
 	align-items: center;
-
-	// &:hover {
-	//   border-top: 2px solid transparent;
-	//   border-bottom: 2px solid $white;
-	// }
-
-	// Defining the underline from the nav
-	&:hover::before {
-	  display: block;
-	  position: absolute;
-	  top: 2rem;
-	  left: 50%;
-	  content: '';
-	  height: 2px;
-	  width: 1.5rem;
-	  background: $white;
-	  transform: translateX(-50%);
-	}
       }
     }
   }
@@ -150,17 +131,14 @@
     // Navbar closed state (TO FIX);
     .navbar {
       position: fixed;
-      top: 0;
+      top: 100vh;
       left: 0;
       z-index: 1;
       height: 100vh;
       width: 100vw;
       background: $black;
-
-      // to fix
-      opacity: 0;
-      display: none;
       @include transition;
+
 
       // Items structure (flex direction, spacing, fonts, etc...)
       .menu {
@@ -174,19 +152,21 @@
 
 	  text-transform: uppercase;
 	  @include typ('Josefin Sans', 1.5rem, 400, $white);
+
+	  &:hover {
+	    text-decoration: underline;
+
+	    &::before {
+	      content: none;
+	    }
+	  }
 	}
       }
       
       // Navbar open state (TO FIX)
       &.open {
-	display: block;
-	opacity: 1;
-	// to fix
-	animation: open .75s ease-in-out forwards;
-
-	.menu-item {
-	  transform: translateX(0);
-	}
+	top: 0;
+	@include transition;
       }
     }
   }

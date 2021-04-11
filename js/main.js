@@ -24,16 +24,20 @@ function toggle() {
     navbar.classList.add("open");
 
     open = true;
+    changeBg();
+
   } else {
     menuBtnBrg.classList.remove("open");
     navbar.classList.remove("open");
 
     open = false;
+    changeBg();
   }
 }
 
 function changeBg() {
-  if (pageYOffset > 30) {
+  console.log('scrolling');
+  if (pageYOffset > 30 && !open) {
     headerWrapper.classList.add("scrolled");
   } else {
     headerWrapper.classList.remove("scrolled");
