@@ -26,32 +26,3 @@ $v_d_gray: hsl(0, 0%, 41%);
 @mixin transition() {
   transition: all 0.75s ease-in-out;
 }
-
-@keyframes open {
-  from {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: block;
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes close {
-  from {
-    display: block;
-    opacity: 1;
-  }
-  99% {
-    display: block;
-    opacity: 0;
-  }
-  to {
-    display: none;
-    opacity: 0;
-  }
-}

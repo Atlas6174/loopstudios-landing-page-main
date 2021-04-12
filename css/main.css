@@ -9,33 +9,6 @@
 /************************
  ****** Animations ******
  ************************/
-@keyframes open {
-  from {
-    display: none;
-    opacity: 0;
-  }
-  1% {
-    display: block;
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes close {
-  from {
-    display: block;
-    opacity: 1;
-  }
-  99% {
-    display: block;
-    opacity: 0;
-  }
-  to {
-    display: none;
-    opacity: 0;
-  }
-}
 /**********************
  ****** GENERALS ******
  **********************/
@@ -70,7 +43,7 @@ li, ol, ul, a {
   margin: 0 1.5rem;
 }
 
-section, .footer {
+.section, .footer {
   display: flex;
   justify-content: center;
 }
@@ -547,13 +520,49 @@ section, .footer {
     margin-bottom: 1.5rem;
   }
 }
+.first-section .img-wrapper .section-img {
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: all 0.75s ease-in-out;
+}
+.first-section .img-wrapper.observed .section-img {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.75s ease-in-out;
+}
+.first-section .content .content-title, .first-section .content .content-text {
+  transform: translateX(50%);
+  opacity: 0;
+  transition: all 0.75s ease-in-out;
+}
+.first-section .content.observed .content-title, .first-section .content.observed .content-text {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 0.75s ease-in-out;
+}
+
+.second-section .grid-item_img {
+  z-index: -999;
+}
+.second-section .grid-item_img, .second-section .grid-item .img-container, .second-section .grid-item .title-wrapper {
+  transform: translateY(60%);
+  opacity: 0;
+  transition: all 0.75s ease-in-out;
+}
+.second-section .grid .observed .grid-item_img, .second-section .grid .observed .img-container, .second-section .grid .observed .title-wrapper {
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.75s ease-in-out;
+}
+
 .attribution {
-  display: none;
+  display: block;
   position: absolute;
   bottom: 0;
   left: 0;
   font-size: 11px;
   text-align: center;
+  color: white;
 }
 .attribution a {
   color: #3e52a3;

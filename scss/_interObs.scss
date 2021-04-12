@@ -1,0 +1,61 @@
+// Adding animation to the image and text
+.first-section {
+  .img-wrapper {
+    .section-img {
+      transform: translateX(-50%);
+      opacity: 0;
+      @include transition;
+    }
+
+    &.observed {
+      .section-img {
+	transform: translateX(0);
+	opacity: 1;
+	@include transition;
+      }
+    }
+  }
+
+  .content {
+    .content-title, .content-text {
+      transform: translateX(50%);
+      opacity: 0;
+      @include transition;
+    }
+
+    &.observed {
+      .content-title, .content-text {
+	transform: translateX(0);
+	opacity: 1;
+	@include transition;
+      }
+    }
+  }
+}
+
+// Adding animation to the grid items
+.second-section {
+  .grid{
+
+    // Avoiding th overlap from the image after animation
+    &-item_img {
+      z-index: -999;
+    }
+
+    &-item {
+      &_img, .img-container, .title-wrapper {
+	transform: translateY(60%);
+	opacity: 0;
+	@include transition;
+      }
+    }
+
+    .observed {
+      .grid-item_img, .img-container, .title-wrapper {
+	transform: translateY(0);
+	opacity: 1;
+	@include transition;
+      }
+    }
+  }
+}
