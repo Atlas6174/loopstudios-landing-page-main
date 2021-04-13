@@ -532,35 +532,6 @@ li, ol, ul, a {
     margin-bottom: 1.5rem;
   }
 }
-.first-section .img-wrapper .section-img {
-  transform: translateX(-50%);
-  opacity: 0;
-  transition: all 0.75s ease-in-out;
-}
-.first-section .img-wrapper.observed .section-img {
-  transform: translateX(0);
-  opacity: 1;
-  transition: all 0.75s ease-in-out;
-}
-.first-section .content .content-title, .first-section .content .content-text {
-  transform: translateX(50%);
-  opacity: 0;
-  transition: all 0.75s ease-in-out;
-}
-.first-section .content.observed .content-title, .first-section .content.observed .content-text {
-  transform: translateX(0);
-  opacity: 1;
-  transition: all 0.75s ease-in-out;
-}
-
-.second-section .grid-item_img {
-  transform: translateY(60%);
-  opacity: 0;
-}
-.second-section .grid .observed .grid-item_img {
-  animation: bottomTop 0.75s ease forwards;
-}
-
 .attribution {
   display: block;
   position: absolute;
