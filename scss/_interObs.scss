@@ -35,26 +35,18 @@
 
 // Adding animation to the grid items
 .second-section {
-  .grid{
-
-    // Avoiding th overlap from the image after animation
-    &-item_img {
-      z-index: -999;
-    }
+  .grid {
 
     &-item {
-      &_img, .img-container, .title-wrapper {
-	transform: translateY(60%);
-	opacity: 0;
-	@include transition;
+      &_img {
+        transform: translateY(60%);
+        opacity: 0;
       }
     }
 
     .observed {
-      .grid-item_img, .img-container, .title-wrapper {
-	transform: translateY(0);
-	opacity: 1;
-	@include transition;
+      .grid-item_img {
+	animation: bottomTop .75s ease forwards;
       }
     }
   }

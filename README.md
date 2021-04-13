@@ -51,7 +51,7 @@ This time, I wannted to test my css-grid skills in the second section,
 I founded some usefull resources in [css-tricks](https://css-tricks.com/look-ma-no-media-queries-responsive-layouts-using-css-grid/) about responsive grids
 without media queries, an interesting implementation.
 
-This is the core from the implementation:
+This is the core of the implementation:
 
 ```css
 .grid {
@@ -68,8 +68,8 @@ used this tool to give it some movement to the grid items and the image and text
 from the first-section.
 
 Another thing I've learned, is how to iterate over an HTML collection. Use a simple
-"for/in" loop doesn't work, cause it iterate over others elements, besides the HTML
-tags; due to this situation, I had to find out how to iterate correctly. It the
+"for/in" loop doesn't work, cause it iterates over others elements besides the HTML
+tags; due to this situation, I had to find out how to iterate correctly. The
 solution was simple:
 
 ```js
@@ -79,8 +79,8 @@ for (let i = 0; i < frstSection.length; i++) {
 }
 ```
 
-Being "frstSection" the HTML collection. The ".length" method define the finall from
-the loop. That's all.
+Being "frstSection" the HTML collection. The ".length" method define the endpoint
+for loop. That's all.
 
 ### Continued development
 
@@ -94,7 +94,7 @@ I would like to order the animations in "interObs".
 
 ## Author
 
-I don't have webpage yet, nor twitter or another social media. But her you can find my
+I don't have webpage yet, nor twitter or another social media. But here you can find my
 github and frontendmentor profiles:
 
 - Frontend Mentor - [@@Atlas6174](https://www.frontendmentor.io/profile/Atlas6174)

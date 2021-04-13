@@ -26,3 +26,15 @@ $v_d_gray: hsl(0, 0%, 41%);
 @mixin transition() {
   transition: all 0.75s ease-in-out;
 }
+
+/*ItersectionObserver Animation */
+@keyframes bottomTop {
+  from {
+    transform: translateY(60%);
+    opacity: 0;
+  }
+  to {
+    transform: initial;
+    opacity: 1;
+  }
+}
